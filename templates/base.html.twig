@@ -13,9 +13,14 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body class="flex items-start justify-center h-full bg-gray-50">
-        <div class="flex items-center justify-center w-full max-w-full">
-            {% block body %}{% endblock %}
+    <body>
+        <div>
+            <section class="px-6 pb-12 w-full antialiased bg-white">
+                <div class="mx-auto max-w-7xl">
+                    {% include '_navbar.html.twig' %}
+                    {% block body %}{% endblock %}
+                </div>
+            </section>
         </div>
     </body>
 </html>
